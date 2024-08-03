@@ -1,5 +1,8 @@
 from app import create_app, db
-from app.models import User, Photo, Video
+from app.models import User
+
+# Uncomment these imports if Photo and Video models exist in your models.py
+# from app.models import Photo, Video
 
 app = create_app()
 
