@@ -1,12 +1,12 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
-from flask_bootstrap import Bootstrap4
+from flask_bootstrap import Bootstrap
 from config import Config
 
 db = SQLAlchemy()
 login_manager = LoginManager()
-bootstrap = Bootstrap4()
+bootstrap = Bootstrap()
 
 def create_app():
     app = Flask(__name__)
