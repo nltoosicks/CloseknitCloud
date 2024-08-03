@@ -1,12 +1,14 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1 class="text-3xl font-bold mb-4">Welcome to Photo Share</h1>
-<p class="mb-4">Share your photos and videos with friends and family!</p>
-{% if current_user.is_authenticated %}
-    <p>Hello, {{ current_user.username }}!</p>
-    <!-- Add photo upload form and gallery here -->
-{% else %}
-    <p>Please <a href="{{ url_for('auth.login') }}" class="text-blue-500">login</a> or <a href="{{ url_for('auth.register') }}" class="text-blue-500">register</a> to start sharing.</p>
-{% endif %}
+<div class="max-w-4xl mx-auto">
+    <h1 class="text-4xl font-bold mb-6 text-blue-600">Welcome to CloseknitCloud</h1>
+    <p class="text-xl mb-8 text-gray-700">Share your photos and videos with friends and family!</p>
+    {% if current_user.is_authenticated %}
+        <p class="text-lg mb-4">Hello, <span class="font-semibold">{{ current_user.username }}</span>!</p>
+        <!-- Add photo upload form and gallery here -->
+    {% else %}
+        <p class="text-lg mb-4">Please <a href="{{ url_for('auth.login') }}" class="text-blue-500 hover:underline">login</a> or <a href="{{ url_for('auth.register') }}" class="text-blue-500 hover:underline">register</a> to start sharing.</p>
+    {% endif %}
+</div>
 {% endblock %}
