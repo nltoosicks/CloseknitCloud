@@ -2,7 +2,7 @@ from app import db, login_manager
 from flask_login import UserMixin
 from werkzeug.security import generate_password_hash, check_password_hash
 
-from app.models.gallery import Gallery
+from app.models import Gallery
 
 class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
