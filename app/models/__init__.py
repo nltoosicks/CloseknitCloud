@@ -19,3 +19,4 @@ class Gallery(db.Model):
 
     def __repr__(self):
         return f'<Gallery {self.name}>'
+from .models import User, Gallery, Photo, Video
