@@ -4,3 +4,4 @@ __pycache__/
 .aider*
 .aidigestignore
 codebase.md
+dev_workflow.md
